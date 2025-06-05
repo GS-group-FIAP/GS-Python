@@ -19,10 +19,17 @@ def formulario():
             personalAnswer.append(input(personal[i]))
         elif i == 1 or i == 4:
             personalAnswer.append(int(input(personal[i])))
-            if personalAnswer[1] < 15:
+            while personalAnswer[1] < 15:
                 print("Você não tem idade o suficiente para fazer este formulário!")
+                personalAnswer[1] = int(input(personal[i]))
     return
 
+def prevention():
+    before()
+    print("-"*206)
+    during()
+    print("-"*180)
+    after()
 
 def quiz():
     print("Quiz sobre enchentes:")
@@ -33,11 +40,40 @@ def quiz():
 def resultadoQuiz():
     formulario()
     quiz()
+    print("-"*30)
     print("Resultado do seu Quiz:")
     for i in range(5):
         print(question[i])
         print(answer[i])
         print("-"*30)
 
+def before():
+    print("Antes das enchentes:")
+    print("A prevenção começa muito antes da água subir. Se você mora em uma área de risco, esteja sempre atento a sinais de alerta e informações de órgãos oficiais. Cadastre seu número no serviço de alertas da Defesa Civil (SMS 40199) para receber avisos antecipados.")
+    print("Tenha uma mochila com documentos, remédios, lanternas e itens essenciais.")
+    print("Conheça os pontos de abrigo próximos à sua casa.")
+    print("Evite jogar lixo nas ruas, rios e bueiros.")
+    print("Mantenha calhas, telhados e ralos limpos.")
+    
+
+
+def during(): 
+    print("Durante as enchentes:")
+    print("A sua segurança e a de sua família devem ser prioridade. Ao perceber sinais de inundação, aja rapidamente e com calma. Se estiver fora de casa, não tente atravessar áreas alagadas — mesmo com água aparentemente rasa.")
+    print("Desligue a energia e o gás imediatamente.")
+    print("Evacue para um local seguro, preferencialmente elevado.")
+    print("Não ande ou dirija por ruas alagadas.")
+    print("Evite contato com a água da enchente — ela pode estar contaminada.")
+    print("Use apenas lanternas (nunca velas) para evitar risco de incêndio.")
+
+def after():
+    print("Depois das enchentes:")
+    print("Após a enchente, a situação ainda pode oferecer riscos. Só retorne para sua casa quando as autoridades liberarem o local e for seguro. Redobre os cuidados com higiene e saúde.")
+    print("Evite contato direto com a água e a lama restante.")
+    print("Use luvas e botas ao limpar a casa.")
+    print("Descarte alimentos e medicamentos que tiveram contato com a água.")
+    print("Ferva a água para consumo ou utilize água potável.")
+    print("Verifique rachaduras, fiações e riscos estruturais antes de religar energia.")
 
 resultadoQuiz()
+prevention()
