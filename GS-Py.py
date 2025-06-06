@@ -1,5 +1,6 @@
 # Kauê de Almeida Pena - 564211
 # Gabriel Ferreira Machado - 562330
+# João Stellare - 565813
 
 #Crianção das listas para as perguntas e respostas do formulário e do quiz.
 question = ["Caso ocorra uma enchente, qual seria a sua prioridade?\n",
